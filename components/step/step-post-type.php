@@ -22,7 +22,7 @@ add_action('init', 'step_post_types');
 
 //hook into the init step and call create_book_taxonomies when it fires
  
-add_action( 'init', 'create_step_cat_hierarchical_taxonomy', 0 );
+//add_action( 'init', 'create_step_cat_hierarchical_taxonomy', 0 );
  
 //create a custom taxonomy name it subjects for your posts
  
