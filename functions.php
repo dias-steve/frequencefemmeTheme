@@ -7,7 +7,7 @@ require get_template_directory() . '/settings/api/general-settings-utils.php';
 
 require get_template_directory() . '/settings/s2-externallink-settings.php';
 require get_template_directory() . '/components/frontAccessTicket/frontAccessTicket-functions.php';
-require get_template_directory() . '/components/actions/action-functions.php';
+require get_template_directory() . '/components/step/step-functions.php';
 require get_template_directory() . '/utils/utils.php';
 require get_template_directory() . '/components/page/page-functions.php';
 require get_template_directory() . '/components/post/post-functions.php';
