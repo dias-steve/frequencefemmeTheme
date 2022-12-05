@@ -189,28 +189,40 @@ function s2_social_settings ($wp_customize){
             )
         );
 
-        //Donation
-        $wp_customize->add_setting(
-            'social_donation', array(
-                'type'  => 'theme_mod',
-                'default' => '',
-                'sanitize_callback' => 'sanitize_text_field'
-            )
-        );
 
-        $wp_customize->add_control(
-            'social_donation', array(
-                'label' => 'Url plateforme donation',
-                'description' => '',
-                'section' => 'social_external_links',
-                'type' => 'text'
-            )
-        );
 
 
 }
 
-add_action('customize_register', 's2_social_settings');
+function s2_appointement_settings ($wp_customize){
+    //section
+    $wp_customize->add_section(
+        'appointment_external_links', array(
+            'title' => 'Prise de RDV Externe',
+            'description' => 'Plateforme de prise de RDV'
+        )
+    );
+
+    //URL Appointement
+    $wp_customize->add_setting(
+        'appointement_url', array(
+            'type'  => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control(
+        'appointement_url', array(
+            'label' => 'Url plateforme de prise de RDV',
+            'description' => '',
+            'section' => 'appointment_external_links',
+            'type' => 'text'
+        )
+    );
+}
+
+add_action('customize_register', 's2_appointement_settings');
 
 function getExternalUrlList(){
     return array(
@@ -244,7 +256,7 @@ function getExternalUrlList(){
             "id" => get_theme_mod('social_instgram_id'),
         )),
 
-        'social_donation' => get_theme_mod('social_donation'),
+        'url_rdv' => get_theme_mod('appointement_url'),
 
     );
 }
