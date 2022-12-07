@@ -22,12 +22,16 @@ function getHomePageData(){
 function get_home_page_data(){
     return array(
         'id' => get_the_ID(),
-        'title' => 'Accueil',
+        'title' => get_field('title_page'),
         'seo' => get_seo_data(),
-        'content' => get_field('content_list'),
+        'content' => convert_content_list(get_field('content_list')),
 
     );
 }
+
+
+
+
 
 
 
