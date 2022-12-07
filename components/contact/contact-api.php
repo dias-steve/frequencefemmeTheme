@@ -7,9 +7,12 @@ function contactRoute() {
     ));
 
 
+
+
 }
 add_action('rest_api_init', 'contactRoute');
 
 function sendMailfromAPI($data){
     return sendMessageContact($data['message'], $data['public_key'], $data['secret_key']);
 }
+

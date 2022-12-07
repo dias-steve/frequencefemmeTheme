@@ -38,3 +38,4 @@ function sendMail($message){
    
     return    $results;
 }
+

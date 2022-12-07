@@ -156,32 +156,7 @@ function fancy_lab_customizer( $wp_customize){
                 ) 
             );
 
-    // section 2 
-    $wp_customize->add_section(
-        'sec_contact', array(
-            'title' => 'Apparence page Contact',
-            'description' => 'Réglages des la page contact'
-        )
-    );
-
-            //field 1 
-
-            $wp_customize->add_setting(
-                'sec_contact_message', array(
-                    'type'  => 'theme_mod',
-                    'default' => '',
-                    'sanitize_callback' => 'sanitize_text_field'
-                )
-            );
-
-            $wp_customize->add_control(
-                'sec_contact_message', array(
-                    'label' => 'message',
-                    'description' => 'Entrez le message ici svp',
-                    'section' => 'sec_contact',
-                    'type' => 'text'
-                )
-            );
+  
 
 
 }

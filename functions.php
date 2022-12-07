@@ -16,6 +16,7 @@ require get_template_directory() . '/components/homepage/homepage-functions.php'
 require get_template_directory() . '/components/aboutpage/aboutpage-functions.php';
 
 require get_template_directory() . '/components/rgpdPopUp/rgpdPopUp-functions.php';
+require get_template_directory() . '/components/contactpage/contactpage-functions.php';
 
 
 function initCors( $value ) {
