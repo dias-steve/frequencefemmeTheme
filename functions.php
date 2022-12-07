@@ -19,6 +19,8 @@ require get_template_directory() . '/components/aboutpage/aboutpage-functions.ph
 require get_template_directory() . '/components/rgpdPopUp/rgpdPopUp-functions.php';
 require get_template_directory() . '/components/contactpage/contactpage-functions.php';
 
+require get_template_directory() . '/components/footer/footer-functions.php';
+
 
 function initCors( $value ) {
     $origin_url = '*';

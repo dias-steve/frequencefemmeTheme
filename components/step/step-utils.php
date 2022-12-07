@@ -88,12 +88,16 @@ function get_step_page_data_formated(){
 function get_sorted_step_list($step_list){
 
     for ($i = 0; $i < count($step_list) - 1 ; $i++){
+        
         if($step_list[$i]['step_number'] > $step_list[$i + 1]['step_number'] ){
-
             $temp = $step_list[$i];
             $step_list[$i] = $step_list[$i + 1];
             $step_list[$i + 1] = $temp;
 
+            /*updating the value of j = -1
+            so after getting updated for j++
+            in the loop it becomes 0 and
+            the loop begins from the start.*/
             $i = -1;
 
         }
