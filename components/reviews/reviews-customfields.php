@@ -32,5 +32,5 @@ function post_meta_box_events_post(){
     $custom = get_post_custom( $post->ID );
     $advertisingCategory =  $custom[ "review_order_number" ][ 0 ];
 
-    echo "<input type=\"number\" name=\"review_order_number\" value=\"".$advertisingCategory."\" placeholder=\"1\"/> ";
+    echo "<input type=\"number\" name=\"review_order_number\" value=\"".$advertisingCategory."\" placeholder=\"0\"/> ";
 }
