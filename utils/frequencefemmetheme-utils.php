@@ -6,6 +6,10 @@
                 if ($content_list[$i]["bloc_type"] == "path"){
                     $content_list[$i]["step_list"] = get_all_Steps(); // steps-utils
                 }
+
+                if ($content_list[$i]["bloc_type"] == "review"){
+                    $content_list[$i]["reviews_list"] = get_all_Reviews(); // steps-utils
+                }
             }
         }
     
