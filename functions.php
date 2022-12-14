@@ -20,6 +20,7 @@ require get_template_directory() . '/components/rgpdPopUp/rgpdPopUp-functions.ph
 require get_template_directory() . '/components/contactpage/contactpage-functions.php';
 
 require get_template_directory() . '/components/footer/footer-functions.php';
+require get_template_directory() . '/components/reviews/reviews-functions.php';
 
 
 function initCors( $value ) {
