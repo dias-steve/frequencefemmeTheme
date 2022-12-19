@@ -13,6 +13,12 @@
                 if ($content_list[$i]["bloc_type"] == "review"){
                     $content_list[$i]["reviews_list"] = get_all_Reviews(); // steps-utils
                 }
+
+                if ($content_list[$i]["bloc_type"] == "contact-details"){
+                    $content_list[$i]["contact_details"] =get_contact_details(); // steps-utils
+                }
+
+          
             }
         }
     

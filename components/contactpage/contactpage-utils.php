@@ -33,3 +33,14 @@ function getContactPageData()
     );
     return $result;
 }
+
+function get_contact_details(){
+    return array(
+        "message" => get_theme_mod('contactpage_settings_message'),
+        "phone_number" => get_theme_mod('contactpage_phone_number'),
+        "whatapp_number" => get_theme_mod('contactpage_whatapp_number'),
+        "address" => get_theme_mod('contactpage_address'),
+        "email" => get_theme_mod('contactpage_email'),
+        "appointement_url" => get_theme_mod('appointement_url'),
+    );
+}
