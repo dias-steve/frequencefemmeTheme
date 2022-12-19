@@ -2,36 +2,23 @@
 
 function getContactPageData()
 {
+    $results = null;
+    
+    $mainQuery = new WP_Query(array(
+        'posts_per_page' => -1,
+        'post_type' => array('page'),
+        'post_status' => 'publish',
+        'pagename' => 'contact'
+        
+    ));
 
-    $result = array(
-        "seo" => array(
-            "title_seo" =>  get_theme_mod('contactpage_seo_title'),
-            "meta_description_seo" =>  get_theme_mod('contactpage_seo_metadescription'),
-            "other_data_seo" => null,
-        ),
+    while($mainQuery->have_posts()) {
+        $mainQuery->the_post();
 
-        "title" => get_theme_mod('contactpage_title_page'),
-
-        "content" => array(
-            "image_up" => array(
-                "url" => get_theme_mod('contactpage_image_up'),
-                "alt" => get_theme_mod('contactpage_image_up_alt')
-            ),
-            "image_down" => array(
-                "url" => get_theme_mod('contactpage_image_down'),
-                "alt" => get_theme_mod('contactpage_image_down_alt')
-            ),
-            "message" => get_theme_mod('contactpage_settings_message'),
-            "phone_number" => get_theme_mod('contactpage_phone_number'),
-            "whatapp_number" => get_theme_mod('contactpage_whatapp_number'),
-            "address" => get_theme_mod('contactpage_address'),
-            "email" => get_theme_mod('contactpage_email'),
-            "appointement_url" => get_theme_mod('appointement_url'),
-        )
-
-
-    );
-    return $result;
+        $results=  get_contact_page_data_formated();
+        
+    }
+    return $results;   
 }
 
 function get_contact_details(){
@@ -42,5 +29,15 @@ function get_contact_details(){
         "address" => get_theme_mod('contactpage_address'),
         "email" => get_theme_mod('contactpage_email'),
         "appointement_url" => get_theme_mod('appointement_url'),
+    );
+}
+
+function get_contact_page_data_formated(){
+    return array(
+        'id' => get_the_ID(),
+        'title' => get_field('title_page'),
+        'seo' => get_seo_data(),
+        'content' => convert_content_list(get_field('content_list'))
+
     );
 }
