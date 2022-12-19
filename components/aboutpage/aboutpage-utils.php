@@ -13,32 +13,21 @@ function  getAboutPageData() {
     while($mainQuery->have_posts()) {
         $mainQuery->the_post();
 
-        $results= get_about_page_data();
+        $results= get_about_page_data_formated();
         
     }
     return $results;    
 
 }
 
-function get_about_page_data() {
+function get_about_page_data_formated(){
+    return array(
+        'id' => get_the_ID(),
+        'title' => get_field('title_page'),
+        'seo' => get_seo_data(),
+        'content' => convert_content_list(get_field('content_list'))
 
-    $bloc_list= splitBlocContentAbout(get_field('about_content'));
- 
-
-    // splite bloc
-
-    $result = array(
-        'bloc_hero' => get_bloc_hero_data(),
-        'bloc_list_befor_aboutsec' => $bloc_list['before_aboutsec'],
-        'bloc_list_after_aboutser' =>  $bloc_list['after_aboutsec'] ,
-        'bloc_member' =>  get_about_member_data(),
-        'bloc_aboutsec' => get_aboutsec_data()
-    ); 
-    return $result;
-}
-
-function get_about_page_hero_data(){
-    
+    );
 }
 
 function get_bloc_hero_data(){
