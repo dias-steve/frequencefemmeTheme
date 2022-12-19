@@ -6,7 +6,7 @@ function  getAboutPageData() {
         'posts_per_page' => -1,
         'post_type' => array('page'),
         'post_status' => 'publish',
-        'pagename' => 'about'
+        'pagename' => 'apropos'
         
     ));
 
