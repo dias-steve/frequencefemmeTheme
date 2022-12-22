@@ -23,12 +23,7 @@ function getContactPageData()
 
 function get_contact_details(){
     return array(
-        "message" => get_theme_mod('contactpage_settings_message'),
-        "phone_number" => get_theme_mod('contact_phone_number'),
-        "whatapp_number" =>get_field('contact_whatapp_number'),
-        "address" => get_field('contact_address'),
-        "email" => get_field('contact_email'),
-        "appointement_url" => get_field('contact_rdv_url'),
+
     );
 }
 
