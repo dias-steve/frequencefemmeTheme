@@ -3,7 +3,7 @@
 function getSettingData(){
     $result = array(
         'title_website' => get_bloginfo( 'name' ), 
-        'external_links' => getExternalUrlList(),
+   
         'copyright_text' => get_theme_mod('set_copyright'),
         'maintenance_mode' => array(
                     'is_activated' => get_theme_mod( 'set_maintenance_mode'),
