@@ -5,7 +5,7 @@ function step_post_types(){
         'public' => true,
         'label' =>'Step',
         'show_in_rest'=> true,
-        'supports' => array('title','thumbnail','editor'),
+        'supports' => array('title'),
         'labels' => array( //gestion des labels liés à ce postType
             'name' => 'Steps', // nom sur menu 
             'add_new_item' =>'Ajouter un step', //changement du label add new post
