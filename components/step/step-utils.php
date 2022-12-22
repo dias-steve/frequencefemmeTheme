@@ -49,8 +49,9 @@ function get_Step_detail_formated(){
     $post = get_post();
     return array ('id' => get_the_ID(),
     'title' => get_the_title(),
-    'thumbnail' => getThumbnailFormated(get_the_ID()),
-    'content' => get_the_content(),
+    'thumbnail' => get_field('image'),
+    'thumbnail_tiny' => get_field('thumbnails'),
+    'content' => get_field('contenu'),
     'step_number' => get_field('step_number')
 );
 }
