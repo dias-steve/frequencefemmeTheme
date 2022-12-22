@@ -52,7 +52,8 @@ function get_Step_detail_formated(){
     'thumbnail' => get_field('image'),
     'thumbnail_tiny' => get_field('thumbnails'),
     'content' => get_field('contenu'),
-    'step_number' => get_field('step_number')
+    'step_number' => get_field('step_number'),
+    'bg_color' => get_field('bg_color')
 );
 }
 
