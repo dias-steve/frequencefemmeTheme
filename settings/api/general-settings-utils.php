@@ -20,7 +20,8 @@ function getSettingData(){
                         'meta_description' => get_theme_mod( 'set_maintenance_seo_desc')
                     )
                     ),
-        'menus' => getAllMenuKeyDetail()
+        'menus' => getAllMenuKeyDetail(),
+        'rgpd' => getRGPDDataAll()
     );
     return $result;
 }
