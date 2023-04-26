@@ -22,7 +22,7 @@ require get_template_directory() . '/components/contactpage/contactpage-function
 
 require get_template_directory() . '/components/reviews/reviews-functions.php';
 require get_template_directory() . '/components/menu/menu-functions.php';
-
+require get_template_directory() . '/components/revalidatefrontend/revalidatefrontend-functions.php';
 function initCors( $value ) {
     $origin_url = '*';
   
